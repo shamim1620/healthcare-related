@@ -16,6 +16,8 @@ import Doctors from "./component/Doctors/Doctors";
 import Career from "./component/Career/Career";
 import DetailPage from "./component/DetailPage/DetailPage";
 import Login from "./component/Login/Login/Login";
+import AuthProvider from "./context/AuthProvider";
+import PrivateRoute from "./component/Login/PrivateRoute/PrivateRoute";
 
 
 
@@ -24,51 +26,53 @@ function App() {
   return (
     <div className="App">
 
-      <Router>
-        <Header></Header>
-        <Switch>
-          <Route exact path="/">
+      <AuthProvider>
+        <Router>
+          <Header></Header>
+          <Switch>
+            <Route exact path="/">
 
-            <Home></Home>
+              <Home></Home>
 
-          </Route>
-          <Route path="/home">
-            <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
 
-          </Route>
-          <Route path="/services">
-            <Services></Services>
+            </Route>
+            <Route path="/services">
+              <Services></Services>
 
-          </Route>
-          <Route path="/detail/:serviceId">
-            <DetailPage></DetailPage>
-          </Route>
-          <Route path="/login">
-            <Login></Login>
-          </Route>
-          <Route path="/doctors">
-            <Doctors></Doctors>
+            </Route>
+            <PrivateRoute path="/detail/:serviceId">
+              <DetailPage></DetailPage>
+            </PrivateRoute>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+            <Route path="/doctors">
+              <Doctors></Doctors>
 
-          </Route>
-          <Route path="/about">
-            <About></About>
+            </Route>
+            <Route path="/about">
+              <About></About>
 
-          </Route>
-          <Route path="/career">
-            <Career></Career>
+            </Route>
+            <Route path="/career">
+              <Career></Career>
 
-          </Route>
-          <Route path="/appointment">
-            <Appointment></Appointment>
+            </Route>
+            <Route path="/appointment">
+              <Appointment></Appointment>
 
-          </Route>
+            </Route>
 
-          <Route path="*">
-            <NotFound></NotFound>
-          </Route>
-        </Switch>
-        <Footer></Footer>
-      </Router>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
+          </Switch>
+          <Footer></Footer>
+        </Router>
+      </AuthProvider>
 
     </div>
   );

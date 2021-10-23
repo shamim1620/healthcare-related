@@ -2,6 +2,8 @@ import Button from '@restart/ui/esm/Button';
 import React from 'react';
 import { Container, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
+import useFirebase from '../../hooks/useFirebase';
 import "./Header.css";
 
 
@@ -10,6 +12,8 @@ const Header = () => {
         fontWeight: "bold",
         color: "blue"
     }
+    // const { user, logout } = useFirebase();
+    const { user, logout } = useAuth();
     return (
 
         <div className="header">
@@ -29,7 +33,13 @@ const Header = () => {
                             <Nav.Link as={NavLink} to="/about" activeStyle={activeStyle}>About Us</Nav.Link>
                             <Nav.Link as={NavLink} to="/career" activeStyle={activeStyle}>Career</Nav.Link>
                             <Nav.Link as={NavLink} to="/appointment" activeStyle={activeStyle}>Appointment</Nav.Link>
-                            <Nav.Link as={NavLink} to="/login" activeStyle={activeStyle}>Login</Nav.Link>
+                            {
+                                user?.email ? <Button onClick={logout} variant="light">Logout</Button>
+                                    : <Nav.Link as={NavLink} to="/login" activeStyle={activeStyle}>Login</Nav.
+                                        Link>
+
+                            }
+
                         </Nav>
                         <Form className="d-flex">
                             <FormControl
@@ -41,6 +51,9 @@ const Header = () => {
                             <Button variant="outline-success">Search</Button>
                         </Form>
                     </Navbar.Collapse>
+                    <Navbar.Text>
+                        Signed in as: <a href="#login">{user.displayName}</a>
+                    </Navbar.Text>
                 </Container>
             </Navbar>
 
