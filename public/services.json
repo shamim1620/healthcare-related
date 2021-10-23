@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Cancer",
+        "img": "https://images.newscientist.com/wp-content/uploads/2019/06/06165424/c0462719-cervical_cancer_cell_sem-spl.jpg?width=1200",
+        "description": "Cancer is a disease in which some of the body's cells grow uncontrollably and spread to other parts of the body. Cancer can start almost anywhere in the human body, which is made up of trillions of cells"
+    },
+    {
+        "id": 2,
+        "name": "Cardiology",
+        "img": "https://www.genengnews.com/wp-content/uploads/2018/10/GENExclusive_Getty_758308075_KaterynaKon_SciencePhotoLibrary_GettyImages_Heart.jpg",
+        "description": "Cardiology is a branch of medicine that deals with the disorders of the heart as well as some parts of the circulatory system. The field includes medical diagnosis and treatment of congenital heart defects, coronary artery disease, heart failure, valvular heart disease and electrophysiology."
+    },
+    {
+        "id": 3,
+        "name": "Neurology",
+        "img": "https://www.medicoverhospitals.in/wp-content/uploads/2019/09/neurology.jpg",
+        "description": "Neurology is the branch of medicine concerned with the study and treatment of disorders of the nervous system. The nervous system is a complex, sophisticated system that regulates and coordinates body activities. ... Central nervous system: the brain and spinal cord."
+    },
+    {
+        "id": 4,
+        "name": "Lab",
+        "img": "https://d1ngglk168riv7.cloudfront.net/n/wp-content/uploads/2021/02/24170647/The-traditional-clinical-labs-evolve-scaled.jpg",
+        "description": "With State-of-the-art facilities and the most Advanced Technologies, we strive to deliver High-quality Laboratory Diagnostic services."
+    },
+    {
+        "id": 5,
+        "name": "Dental Care",
+        "img": "https://www.sagarhospitals.in/wp-content/themes/sagar/images/department_images/Department-of-Dental-Sciences-and-Maxillofacial-Surgeries_tn.jpg",
+        "description": "We have a team of specialists in every field of Dentistry, Orthodontics, Periodontics, Prosthodontics, and Endodontics."
+    },
+    {
+        "id": 6,
+        "name": "Orthopedic",
+        "img": "https://i.ibb.co/qmr6FBR/Close-up-Of-A-Man-Wearing-Knee-Brace-Over-White-Background.jpg",
+        "description": "Orthopaedic surgery or orthopaedics, is the branch of surgery concerned with conditions involving the musculoskeletal system."
+    },
+    {
+        "id": 7,
+        "name": "Urology",
+        "img": "https://i.ibb.co/Yk8NLbm/kidney.jpg",
+        "description": "Urology, also known as genitourinary surgery, is the branch of medicine that focuses on surgical and medical diseases of the male and female urinary-tract system and the male reproductive organs."
+    },
+    {
+        "id": 8,
+        "name": "Surgery",
+        "img": "https://i.ibb.co/S6TLby7/surgery.jpg",
+        "description": "Surgery is a medical or dental specialty that uses operative manual and instrumental techniques on a person to investigate or treat a pathological condition such as a disease or injury, to help improve bodily function, appearance, or to repair unwanted ruptured areas."
+    }
+]
