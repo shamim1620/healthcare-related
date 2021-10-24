@@ -41,19 +41,12 @@ const Header = () => {
                             }
 
                         </Nav>
-                        <Form className="d-flex">
-                            <FormControl
-                                type="search"
-                                placeholder="Search"
-                                className="me-2"
-                                aria-label="Search"
-                            />
-                            <Button variant="outline-success">Search</Button>
-                        </Form>
+                        <Navbar.Text>
+                            Signed in as: <a href="#login">{user.displayName}</a>
+                        </Navbar.Text>
+
                     </Navbar.Collapse>
-                    <Navbar.Text>
-                        Signed in as: <a href="#login">{user.displayName}</a>
-                    </Navbar.Text>
+
                 </Container>
             </Navbar>
 

@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Cart from '../Cart/Cart';
 
-const Services = () => {
+const Services = (props) => {
+    const [services, setServices] = useState([])
+    useEffect(() => {
+        fetch("services.json")
+            .then(res => res.json())
+            .then(data => setServices(data))
+    }, [])
     return (
-        <div>
-            <h2>this is services</h2>
+        <div className="row row-cols-1 row-cols-md-3 g-4">
+            {
+                services.map(service => <Cart service={service}></Cart>)
+            }
+
         </div>
     );
 };

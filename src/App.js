@@ -18,6 +18,7 @@ import DetailPage from "./component/DetailPage/DetailPage";
 import Login from "./component/Login/Login/Login";
 import AuthProvider from "./context/AuthProvider";
 import PrivateRoute from "./component/Login/PrivateRoute/PrivateRoute";
+import Register from "./component/Login/Register/Register";
 
 
 
@@ -56,6 +57,9 @@ function App() {
             <Route path="/about">
               <About></About>
 
+            </Route>
+            <Route path="/register">
+              <Register></Register>
             </Route>
             <Route path="/career">
               <Career></Career>
