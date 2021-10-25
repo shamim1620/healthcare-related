@@ -53,10 +53,15 @@ const Home = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
-            <div className="row row-cols-1 row-cols-md-3 g-4">
-                {
-                    services.slice(0, 6).map(service => <Cart service={service}></Cart>)
-                }
+            <div className="mt-4">
+                <h3> Our Services</h3>
+                <div className="row row-cols-1 row-cols-md-3 g-4">
+                    {
+                        services.slice(0, 6).map(service => <Cart
+                            key={service.id}
+                            service={service}></Cart>)
+                    }
+                </div>
             </div>
 
 
